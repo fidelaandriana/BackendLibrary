@@ -1,4 +1,4 @@
-import { IsInt, Min } from 'class-validator'
+import { IsInt, IsOptional, Min } from 'class-validator'
 
 export class CreateLoanDetailDto {
   @IsInt()
@@ -7,6 +7,7 @@ export class CreateLoanDetailDto {
   @IsInt()
   bookId: number
 
+  @IsOptional()
   @IsInt()
   @Min(1)
   qty: number
