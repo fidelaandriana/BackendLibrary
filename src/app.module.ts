@@ -8,10 +8,9 @@ import { LoanService } from './loan/loan.service';
 import { LoanModule } from './loan/loan.module';
 import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
-import { LoanDetailModule } from './loan-detail/loan-detail.module';
 
 @Module({
-  imports: [BooksModule, MembersModule, PrismaModule, BooksModule, MembersModule, LoanModule, AuthModule, UserModule, LoanDetailModule],
+  imports: [BooksModule, MembersModule, PrismaModule, BooksModule, MembersModule, LoanModule, AuthModule, UserModule],
   controllers: [AppController],
   providers: [AppService, LoanService],
 }) 

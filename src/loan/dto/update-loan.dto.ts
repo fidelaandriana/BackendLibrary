@@ -1,4 +1,11 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateLoanDto } from './create-loan.dto';
+import { IsOptional, IsDateString } from 'class-validator';
+import { LoanStatus } from '@prisma/client';
 
-export class UpdateLoanDto extends PartialType(CreateLoanDto) {}
+export class UpdateLoanDto {
+  @IsOptional()
+  status?: LoanStatus;
+
+  @IsOptional()
+  @IsDateString()
+  returnDate?: string;
+}
