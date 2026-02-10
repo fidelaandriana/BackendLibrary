@@ -14,8 +14,4 @@ password: string;
 
 @IsEnum(UserRole)
 role: UserRole
-
-@IsInt()
-@IsNotEmpty()
-memberId: number;
 } 
